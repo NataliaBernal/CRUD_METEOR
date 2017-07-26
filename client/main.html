@@ -1,0 +1,23 @@
+<head>
+  <title>LISTA DE TAREAS </title>
+</head>
+
+<body>
+  {{> tareas}}
+</body>
+
+<template name ="tareas">
+  
+      <h1>Añadir Tarea</h1>
+          <form class='añadir-tareas'>
+            <label>Nombre Tarea</label>
+            <input type="text" name="name" placeholder="Añadir Tarea"/>
+            <input type="submit" value="submit"/> 
+          </form>
+      <h3>Tarea</h3>
+      <ul>
+        {{#each tareas}}
+          <li>{{nombre}}<a href="#" class="eliminar-tareas">X</a></li>
+        {{/each}}
+      </ul>
+</template>
